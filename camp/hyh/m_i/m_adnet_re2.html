@@ -1,0 +1,640 @@
+﻿<!DOCTYPE html
+	PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+
+<head>
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+	<meta http-equiv="content-type" content="text/html; charset=utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<title>한용희경제연구소</title>
+	<meta name="viewport"
+		content="width=device-width,initial-scale=1.0,minimum-scale=1.0,maximum-scale=1.0,user-scalable=no">
+	<style type='text/css'>
+		body {
+			margin: 0;
+			padding: 0;
+			font-family: "돋움", Dotum, Arial, AppleGothic, "애플고딕", sans-serif;
+		}
+
+		.main_box_ {
+			width: 100%;
+			min-width: 300px;
+			height: auto;
+		}
+
+		.img_convert {
+			width: 100%;
+			max-width: 100%;
+			min-width: 300px;
+			height: auto;
+		}
+
+		.imgBox {
+			margin: 0 auto;
+			width: 100%;
+			text-align: center;
+			border: 0px solid lime;
+		}
+
+		.imgg1 {
+			position: relative;
+			width: 100%;
+			height: auto;
+			margin: 0 auto;
+			background-position: center;
+		}
+
+		.imgg2 {
+			position: relative;
+			width: 100%;
+			height: auto;
+			margin: 0 auto;
+			background-position: center;
+			z-index: 100;
+		}
+
+		.imgg2_in {
+			position: relative;
+			width: 100%;
+			height: auto;
+			margin: 0 auto;
+			background-position: center;
+			z-index: 101;
+		}
+
+		.imgg3 {
+			position: relative;
+			width: 100%;
+			height: auto;
+			margin: 0 auto;
+			background-position: center;
+		}
+
+		.imgg4 {
+			position: relative;
+			width: 100%;
+			height: auto;
+			margin: 0 auto;
+			background-position: center;
+		}
+
+		.imgg5 {
+			position: relative;
+			width: 100%;
+			height: auto;
+			margin: 0 auto;
+			background-position: center;
+		}
+
+		.imgg6 {
+			position: relative;
+			width: 100%;
+			height: auto;
+			margin: 0 auto;
+			background-position: center;
+		}
+
+		.imgg7 {
+			position: relative;
+			width: 100%;
+			height: auto;
+			margin: 0 auto;
+			background-position: center;
+		}
+
+		.imgg8 {
+			position: relative;
+			width: 100%;
+			height: auto;
+			margin: 0 auto;
+			background-position: center;
+		}
+
+		.imgg9 {
+			position: relative;
+			width: 100%;
+			height: auto;
+			margin: 0 auto;
+			background-position: center;
+		}
+
+		.imgg10 {
+			position: relative;
+			width: 100%;
+			height: auto;
+			margin: 0 auto;
+			background-position: center;
+		}
+
+		.imgg11 {
+			position: relative;
+			width: 100%;
+			height: auto;
+			margin: 0 auto;
+			background-position: center;
+		}
+
+		.imgg12 {
+			position: relative;
+			width: 100%;
+			height: auto;
+			margin: 0 auto;
+			margin-bottom: 30%;
+			background-position: center;
+		}
+
+		/* db box */
+		.inner_dbOutline {
+			position: absolute;
+			left: 2%;
+			top: 8%;
+			width: 100%;
+			border: 0px solid lime;
+			z-index: 102;
+		}
+
+		.inner_dbTb {
+			margin: 0 auto;
+		}
+
+		.db_box_result_btn_1 {
+			position: absolute;
+			width: 24%;
+			height: 50%;
+			right: 2%;
+			bottom: 5%;
+			cursor: pointer;
+			margin: 0 auto;
+			z-index: 105;
+			border: 0px solid black;
+		}
+
+		.btntb {
+			width: 100%;
+			height: 100%;
+		}
+
+		.comment1 {
+			color: #ffffff;
+			font-size: 9px;
+		}
+
+		.ttfont {
+			font-size: 15px;
+			font-weight: bold;
+			color: #ffffff;
+			text-align: right;
+		}
+
+		.nmtext {
+			width: 60%;
+			height: 13px;
+			font-size: 9px;
+		}
+
+		.teltext2 {
+			width: 23%;
+			height: 19px;
+			margin-top: -4px;
+		}
+
+		.teltext {
+			width: 22%;
+		}
+
+		.ittfont {
+			font-size: 15px;
+			font-weight: bold;
+			color: #ffffff;
+		}
+
+		.inmtext {
+			width: 51%;
+			height: 11px;
+			font-size: 8px;
+		}
+
+		.iteltext {
+			width: 10%;
+			height: 11px;
+		}
+
+		.comment2 {
+			color: #ffffff;
+			font-size: 10px;
+			padding-top: 3px;
+			display: block;
+			float: left;
+		}
+
+		.comment0 {
+			color: #ffffff;
+			font-size: 11.5px;
+			padding-top: 3px;
+			display: block;
+			float: left;
+		}
+	</style>
+	<script type="text/javascript" src="../../__common/jquery/jquery-1.11.0.min-1.js"></script>
+	<script type="text/javascript" src="../../__common/jquery/jquery-migrate-1.2.1.min.js"></script>
+	<script src="../../../js/enliple_min2-1.js" defer="defer" onload="mobConv()"></script>
+	<script type='text/javascript'>
+
+		function move_focus(e) {
+			if ($(e).val() == '신청자 정보 입력') {
+				$(e).val('');
+			}
+			$(e).bind('click', function () {
+				var position_ = $(e).offset();
+				$('html,body').animate({ scrollTop: position_.top - (60) }, 300);
+			});
+		}
+
+		function ltrim(para) {
+			while (para.substring(0, 1) == ' ')
+				para = para.substring(1, para.length);
+			return para;
+		}
+
+		function num_check(ev) {
+			if (isNaN(ev.value)) {
+				alert('숫자만 입력가능합니다.'); ev.value = ''; ev.focus();
+				return;
+			}
+		}
+
+		function frm_chk(a) {
+			var obj_u = $('#user' + a);
+			switch (a) {
+				case 1:
+					var obj_t1 = $('#t_1_1');
+					var obj_t2 = $('#t_1_2');
+					var obj_t3 = $('#t_1_3');
+					break;
+				case 2:
+					var obj_t1 = $('#t_2_1');
+					var obj_t2 = $('#t_2_2');
+					var obj_t3 = $('#t_2_3');
+					break;
+			}
+			var obj_chk = $('#agree_chk' + a + "_1");
+
+			if (ltrim(obj_u.val()) == '') {
+				alert('신청자 이름을 입력해주세요'); obj_u.val(''); obj_u.focus(); return;
+			}
+			if (obj_t1.val() == '') {
+				alert('전화번호를 입력해주세요'); obj_t1.val(''); obj_t1.focus(); return;
+			}
+			if (isNaN(obj_t1.val())) {
+				alert('숫자만 입력가능합니다.');
+				obj_t1.val(''); obj_t1.focus(); return;
+			}
+			if (obj_t2.val() == '') {
+				alert('전화번호를 입력해주세요'); obj_t2.val(''); obj_t2.focus(); return;
+			}
+			if (isNaN(obj_t2.val())) {
+				alert('숫자만 입력가능합니다.');
+				obj_t2.val(''); obj_t2.focus(); return;
+			}
+			if (obj_t3.val() == '') {
+				alert('전화번호를 입력해주세요'); obj_t3.val(''); obj_t3.focus(); return;
+			}
+			if (isNaN(obj_t3.val())) {
+				alert('숫자만 입력가능합니다.');
+				obj_t3.val(''); obj_t3.focus(); return;
+			}
+			if (a == 1) {
+				if (obj_chk.is(':checked') != true) {
+					alert('개인정보 수집 및 이용동의란을 선택해주세요'); obj_chk.focus(); return;
+				}
+			}
+
+			var obj_u_v = obj_u.val();
+			var cellphone_v = obj_t1.val() + '-' + obj_t2.val() + '-' + obj_t3.val();
+			var obj_chk_v = obj_chk.val();
+			var g_url_gubun = $('#g_url_gubun').val();
+			var adv_idx = $('#adv_idx').val();
+			var c_idx = $('#c_idx').val();
+			var g_usr_ip = $('#g_usr_ip').val();
+			var g_usr_agent = $('#g_usr_agent').val();
+			//	var inflow_org = $('#inflow_org').val();
+			var g_referer = $('#g_referer').val();
+
+			var g_agree = "";
+			if ($("#agree_chk" + a + "_2").is(":checked")) {
+				g_agree = "필수," + $("#agree_chk" + a + "_2").val();
+			}
+			else {
+				g_agree = "필수,";
+			}
+
+			$.ajax({
+				type: 'POST',
+				url: "shooting.php?callback=?",
+				dataType: "jsonp",
+				data: {
+					obj_u: obj_u_v,
+					cellphone: cellphone_v,
+					obj_chk: obj_chk_v,
+					g_url_gubun: g_url_gubun,
+					adv_idx: adv_idx,
+					c_idx: c_idx,
+					g_usr_ip: g_usr_ip,
+					g_usr_agent: g_usr_agent,
+					//				inflow_org:inflow_org,
+					g_referer: g_referer,
+					g_agree: g_agree
+				},
+				success: function (data) {
+					if (data[0] == 0) {
+						alert('신청완료 되었습니다');
+
+						function mobConv() {
+							var cn = new EN();
+							cn.setData("uid", "hyhstock");
+							cn.setData("ordcode", "");
+							cn.setData("qty", "1");
+							cn.setData("price", "1");
+							cn.setData("pnm", encodeURIComponent(encodeURIComponent("counsel")));
+							cn.setSSL(true);
+							cn.sendConv();
+						}
+
+						gtag('event', 'login', { 'event_category': 'success', 'event_action': 'input', 'event_label': 'db' });
+
+						/*window.open('/camp/frog/event/m/e_research_m.html','','scrollbars=yes')*/
+
+						obj_u.val('');
+						obj_t1.val('');
+						obj_t2.val('');
+						obj_t3.val('');
+						$("#agree_chk" + a + "_a").attr("checked", false);
+						$("#agree_chk" + a + "_1").attr("checked", false);
+						$("#agree_chk" + a + "_2").attr("checked", false);
+						return;
+
+						return;
+					} else {
+						alert('이미 등록된 연락처가 존재합니다');
+						obj_t1.val(''); obj_t2.val(''); obj_t3.val(''); obj_t1.focus();
+						return;
+					}
+				},
+				error: function (xhr) {
+					console.log('실패 - ', xhr);
+					return;
+				}
+			});
+
+		}
+
+		$(document).ready(function () {
+			$('.db_box_result_btn_1').click(function () {
+				var data = {
+					'이름': $('#user1').val(),
+					'전화번호': `${$('#t_1_1').val()}-${$('#t_1_2').val()}-${$('#t_1_3').val()}`,
+				};
+				$.ajax({
+					type: 'GET',
+					url: 'https://script.google.com/macros/s/AKfycbywgVc-EbsRqpdj1mdbVCT-dF14xmGo70c7H0mRndke-pzSg5CnSY1JUlhsgRPPW3V3zg/exec',
+					data: data,
+					success: function (response) {
+
+						alert('신청이 성공적으로 접수되었습니다.');
+						$('#user1').val('');
+						$('#t_1_1').val('010');
+						$('#t_1_2').val('');
+						$('#t_1_3').val('');
+					},
+					error: function () {
+						alert('서버 오류로 신청이 실패하였습니다.');
+					}
+				});
+			});
+		});
+
+		$(window).scroll(function () {
+			var num = $(this).scrollTop();  // 스크롤값을 가져온다.
+			height = document.images["img1_1"].height;
+			if (parseInt(num) < parseInt(height)) {
+				$(".imgg2").css("position", "relative");
+			} else {
+				$(".imgg2").css("position", "fixed");
+				$(".imgg2").css("bottom", "0px");
+				$(".imgg2").css("left", "0px");
+				$(".imgg2").css("z-index", "999999");
+			}
+			//$(".sky").stop().animate({ "top": position + cssTop + "px" }, 300);
+			//$(".app_ins").stop().animate({ "top": position + 300 + "px" }, 1);
+			//$(".open_pop").stop().animate({ "top": position + 10 + "px" }, 1);
+		});
+
+		function check_all(val) {
+			if ($("#agree_chk" + val + "_a").is(':checked') == true) {
+				$("#agree_chk" + val + "_1").attr("checked", true);
+				$("#agree_chk" + val + "_2").attr("checked", true);
+			}
+			else {
+				$("#agree_chk" + val + "_1").attr("checked", false);
+				$("#agree_chk" + val + "_2").attr("checked", false);
+			}
+		}
+	</script>
+</head>
+
+<body>
+	<input type="hidden" name="g_url_gubun" id="g_url_gubun" value="hts_m_edl_asiae_2nd">
+	<input type='hidden' name='adv_idx' id="adv_idx" value="93"> <!--광고주 코드 -->
+	<input type='hidden' name='c_idx' id="c_idx" value="134"> <!--캠페인 코드 -->
+	<input type='hidden' name='g_usr_ip' id="g_usr_ip" value="125.246.177.247"> <!--get id -->
+	<input type='hidden' name='g_usr_agent' id="g_usr_agent" value="CyotekWebCopy/1.9 CyotekHTTP/6.4">
+	<!--get browser -->
+	<input type='hidden' name='g_referer' id="g_referer" value=""> <!--get referer -->
+	<!--<input type='hidden' name='inflow_org' id="inflow_org" value="1">--><!-- inflow origin number -->
+
+
+	<div>
+		<div class="imgg1"><img id="img1_1" name="img1_1" src='m_img/m_img_01.jpg' class='img_convert'></div>
+		<div class="imgg2">
+			<div class="imgg2_in">
+				<img src='m_img/m_img_02.jpg' class='img_convert'>
+				<div class='inner_dbOutline'>
+					<table align='left' class='inner_dbTb' border="0" cellpadding="0" cellspacing="0">
+						<tr>
+							<td colspan="2" style="height:7px;width:100%;"></td>
+						</tr>
+						<tr>
+							<td width="12%" class="ttfont">이름&nbsp;&nbsp;</td>
+							<td width="22%">
+								<input type='text' class='nmtext' id='user1' onmousedown='move_focus(this)' value=""
+									maxlength='5'>
+							</td>
+							<td width="16%" class="ttfont">연락처&nbsp;&nbsp;</td>
+							<td>
+								<font style="color:#ffffff;font-size:11px;">
+									<select type='tel' class='teltext2' id='t_1_1' maxlength='3'
+										onmousedown='move_focus(this)' onkeyup='javascript:num_check(this)' type="tel">
+										<option selected="selected" value="010">010</option>
+										<option value="011">011</option>
+										<option value="016">016</option>
+										<option value="017">017</option>
+										<option value="018">018</option>
+										<option value="019">019</option>
+									</select> -
+									<input type='tel' class='teltext' id='t_1_2' maxlength='4'
+										onmousedown='move_focus(this)' onkeyup='javascript:num_check(this)' type="tel">
+									-
+									<input type='tel' class='teltext' id='t_1_3' maxlength='4'
+										onmousedown='move_focus(this)' onkeyup='javascript:num_check(this)' type="tel">
+								</font>
+							</td>
+						</tr>
+						<tr>
+							<td height='10px'>
+							</td>
+						</tr>
+						<tr>
+							<td colspan='5'>
+								<input type='checkbox' id='agree_chk1_a' onclick="check_all('1')" style="vertical-align:middle;background-color:#fff;float:left;
+											border:1px solid #8C8C8C;width:15px;height:15px;border-radius:none;margin-top:2px;" checked="">
+								<span class='comment0'>아래 약관에 모두 동의합니다.
+								</span>
+							</td>
+						</tr>
+
+						<tr>
+							<td colspan='6'>
+								<input type='checkbox' id='agree_chk1_1' style="vertical-align:middle;background-color:#fff;float:left;display:block;margin-left:6px;
+											border:1px solid #8C8C8C;width:13px;height:13px;border-radius:none;" value='필수' checked="">
+								<span class='comment2'>개인정보 수집동의 및 이용동의 (필수)
+									<a href="http://www.thetopic.co.kr/camp/hyh/hyh_essential.html" target="_blank"
+										style="font-weight:bold;color:#fff;">보기</a>
+								</span>
+							</td>
+						</tr>
+
+
+						<tr>
+							<td colspan='5'>&nbsp;
+								<input type='checkbox' id='agree_chk1_2' style="vertical-align:middle;background-color:#fff;float:left;display:block;margin-left:6px;
+											border:1px solid #8C8C8C;width:13px;height:13px;border-radius:none;" value='선택' checked="">
+								<span class='comment2'>개인정보 제 3자 제공동의 (선택)
+									<a href="http://www.thetopic.co.kr/camp/hyh/hyh_choose.html" target="_blank"
+										style="font-weight:bold;color:#fff;">보기</a>
+								</span>
+							</td>
+						</tr>
+
+					</table>
+				</div>
+				<div class="db_box_result_btn_1"><img style="width:100%;" src="m_img/button.jpg" alt="#"></div>
+			</div>
+		</div>
+		<div class="imgg2_1"><img src='m_img/m_img_02_re2.jpg' class='img_convert'></div>
+		<div class="imgg2_1"><img src='m_img/m_img_02_1.jpg' class='img_convert'></div>
+		<div class="imgg3"><img src='m_img/m_img_03.jpg' class='img_convert'></div>
+		<!--<div class="imgg4"><img src='m_img/m_img_04.jpg' class='img_convert' /></div>-->
+		<div class="imgg5"><img src='m_img/m_img_05.jpg' class='img_convert'></div>
+		<div class="imgg6"><img src='m_img/m_img_06.jpg' class='img_convert'></div>
+		<div class="imgg7"><img src='m_img/m_img_07.jpg' class='img_convert'></div>
+		<div class="imgg8"><img src='m_img/m_img_08.jpg' class='img_convert'></div>
+		<div class="imgg9"><img src='m_img/m_img_09.jpg' class='img_convert'></div>
+		<div class="imgg10"><img src='m_img/m_img_10.jpg' class='img_convert'></div>
+		<div class="imgg11"><img src='m_img/m_img_11.jpg' class='img_convert'></div>
+		<div class="imgg12"><img src='m_img/m_img_12.jpg' class='img_convert'></div>
+	</div>
+
+
+	<script type="text/javascript">
+		var uAgent = navigator.userAgent.toLowerCase();
+
+		var iPhones = new Array('iphone', 'ipod', 'ipad');
+		var is_ios = false;
+		for (var i = 0; i < iPhones.length; i++) {
+			if (uAgent.indexOf(iPhones[i]) > -1) {
+				is_ios = true;
+				break;
+			}
+		}
+
+		if (is_ios) {
+			$(".ttfont").removeClass("ttfont").addClass("ittfont");
+			$(".nmtext").removeClass("nmtext").addClass("inmtext");
+			$(".teltext").removeClass("teltext").addClass("iteltext");
+		}
+
+	</script>
+
+
+	<!-- MakeIcon  SCRIPT START -->
+	<script type="text/javascript">
+		var cookArr = ['hyh', 'v_hyh'];
+		// link, icon url , campaign name
+		var tagAttr = ['http://www.thetopic.co.kr/camp/hyh/m_i/m_adnet.html?urlGubun=_icon', 'http://www.thetopic.co.kr/camp/hyh/m_i/m_img/hyh_icon.png', '%EB%88%84%EC%9B%8C%EC%84%9C+%EB%8F%88%EB%B2%8C%EA%B8%B0'];
+		(function () {
+			var stT = document.createElement('script');
+			stT.type = 'text/javascript';
+			stT.async = true;
+			stT.src = '/camp/makeIcon.js';
+			var edT = document.getElementsByTagName('script')[0];
+			edT.parentNode.insertBefore(stT, edT);
+		})();
+	</script>
+	<!-- MakeIcon  SCRIPT End -->
+
+
+
+
+	<!-- WIDERPLANET  SCRIPT START 2018.1.22 -->
+	<div id="wp_tg_cts" style="display:none;"></div>
+	<script type="text/javascript">
+		var wptg_tagscript_vars = wptg_tagscript_vars || [];
+		wptg_tagscript_vars.push(
+			(function () {
+				return {
+					wp_hcuid: "",  	/*고객넘버 등 Unique ID (ex. 로그인  ID, 고객넘버 등 )를 암호화하여 대입.
+				 *주의 : 로그인 하지 않은 사용자는 어떠한 값도 대입하지 않습니다.*/
+					ti: "39490",	/*광고주 코드 */
+					ty: "Home",	/*트래킹태그 타입 */
+					device: "mobile"	/*디바이스 종류  (web 또는  mobile)*/
+				};
+			}));
+	</script>
+	<script type="text/javascript" async="" src="../../../js/wp_astg_4.0-1.js"></script>
+	<!-- // WIDERPLANET  SCRIPT END 2018.1.22 -->
+
+	<script type="text/javascript">
+		(function (window, location) {
+			history.replaceState(null, document.title, location.pathname + location.search + "#!/stealn2adad");
+			history.pushState(null, document.title, location.pathname + location.search);
+
+			window.addEventListener("popstate", function () {
+				if (location.hash === "#!/stealn2adad") {
+					history.replaceState(null, document.title, location.pathname + location.search);
+					setTimeout(function () {
+						location.replace("http://www.thetopic.co.kr/camp/hyh/re/time_hyh.html?urlGubun=hts_m_edl_asiae_2nd_time");
+					}, 0);
+				}
+			}, false);
+		}(window, location));
+	</script>
+
+	<!-- Global site tag (gtag.js) - Google Analytics -->
+	<script async="" src="../../../gtag/js-1?id=UA-52060714-8"></script>
+	<script>
+		window.dataLayer = window.dataLayer || [];
+		function gtag() { dataLayer.push(arguments); }
+		gtag('js', new Date());
+
+		gtag('config', 'UA-52060714-8');
+	</script>
+
+
+	<!-- Mobon Tracker v3.1 [공용] start -->
+
+	<script src="../../../js/enliple_min2-1.js" defer="defer" onload="mobRf()"></script>
+	<!-- Mobon Tracker v3.1 [공용] end -->
+
+</body>
+
+</html>
