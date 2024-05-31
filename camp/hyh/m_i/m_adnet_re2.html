@@ -390,26 +390,30 @@
 
 		$(document).ready(function () {
 			$('.db_box_result_btn_1').click(function () {
-				var data = {
-					'이름': $('#user1').val(),
-					'전화번호': `${$('#t_1_1').val()}-${$('#t_1_2').val()}-${$('#t_1_3').val()}`,
-				};
-				$.ajax({
-					type: 'GET',
-					url: 'https://script.google.com/macros/s/AKfycbywgVc-EbsRqpdj1mdbVCT-dF14xmGo70c7H0mRndke-pzSg5CnSY1JUlhsgRPPW3V3zg/exec',
-					data: data,
-					success: function (response) {
+				frm_chk(1);
+				if ($('#user1').val() !== "" && $('#t_1_2').val() !== "" && $('#t_1_3').val() !== "") {
+					var data = {
+						'이름': $('#user1').val(),
+						'전화번호': `${$('#t_1_1').val()}-${$('#t_1_2').val()}-${$('#t_1_3').val()}`,
+					};
+					$.ajax({
+						type: 'GET',
+						url: 'https://script.google.com/macros/s/AKfycbywgVc-EbsRqpdj1mdbVCT-dF14xmGo70c7H0mRndke-pzSg5CnSY1JUlhsgRPPW3V3zg/exec',
+						data: data,
+						success: function (response) {
 
-						alert('신청이 성공적으로 접수되었습니다.');
-						$('#user1').val('');
-						$('#t_1_1').val('010');
-						$('#t_1_2').val('');
-						$('#t_1_3').val('');
-					},
-					error: function () {
-						alert('서버 오류로 신청이 실패하였습니다.');
-					}
-				});
+							alert('신청이 성공적으로 접수되었습니다.');
+							$('#user1').val('');
+							$('#t_1_1').val('010');
+							$('#t_1_2').val('');
+							$('#t_1_3').val('');
+						},
+						error: function () {
+							alert('서버 오류로 신청이 실패하였습니다.');
+						}
+					});
+				}
+
 			});
 		});
 
@@ -466,8 +470,8 @@
 						<tr>
 							<td width="12%" class="ttfont">이름&nbsp;&nbsp;</td>
 							<td width="22%">
-								<input type='text' class='nmtext' id='user1' onmousedown='move_focus(this)' value=""
-									maxlength='5'>
+								<input required type='text' class='nmtext' id='user1' onmousedown='move_focus(this)'
+									value="" maxlength='5'>
 							</td>
 							<td width="16%" class="ttfont">연락처&nbsp;&nbsp;</td>
 							<td>
@@ -481,10 +485,10 @@
 										<option value="018">018</option>
 										<option value="019">019</option>
 									</select> -
-									<input type='tel' class='teltext' id='t_1_2' maxlength='4'
+									<input required type='tel' class='teltext' id='t_1_2' maxlength='4'
 										onmousedown='move_focus(this)' onkeyup='javascript:num_check(this)' type="tel">
 									-
-									<input type='tel' class='teltext' id='t_1_3' maxlength='4'
+									<input required type='tel' class='teltext' id='t_1_3' maxlength='4'
 										onmousedown='move_focus(this)' onkeyup='javascript:num_check(this)' type="tel">
 								</font>
 							</td>
